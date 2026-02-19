@@ -1,8 +1,15 @@
 // server.mjs
 import { createServer } from 'node:http';
-
+import { readFileSync } from 'node:fs';
+const favicon = readFileSync('./img/favicon-32x32.png');
 const server = createServer((req, res) => {
   console.log(req.url)
+  if(req.url === '/favicon.ico') {
+    //open file and return it 
+    res.writeHead(200, { 'Content-Type': 'image/png' });
+    res.end(favicon);
+    return;
+  }
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end('Hello World!\n');
 });

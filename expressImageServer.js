@@ -24,7 +24,6 @@ if (!validateDimention(width) || !validateDimention(height)) {
     return res.status(400).send('Invalid width || height');
   }
 
-
   res.setHeader('Content-Type', 'image/png');
 
   sharp(imagePath)

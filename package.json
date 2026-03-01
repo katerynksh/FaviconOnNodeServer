@@ -1,0 +1,21 @@
+{
+  "name": "lessons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "expressImageServer.js",
+  "scripts": {
+    "start": "node expressImageServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "imports": {
+    "fs": "node:fs"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "require": "^2.4.20",
+    "sharp": "^0.34.5"
+  }
+}

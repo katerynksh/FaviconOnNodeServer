@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>єжик</title>
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Головна сторінка єжика</h1>
+    <img id="myImage" src="../img/hedgehog.png">
+    <br><br>
+    <button onclick="rotate()">Повернути єжика</button>
+    <script>
+        let currentRotation = 0;
+
+        function rotate() {
+            fetch('/rotate').then(() => {
+                document.getElementById('myImage').src = '/image?' + Date.now();
+            });
+        }
+    </script>
+
+    <a href="empty.html">Перейти на пусту сторінку</a>
+</body>
+</html>
+
